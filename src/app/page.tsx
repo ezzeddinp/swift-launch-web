@@ -6,10 +6,12 @@ import Productivity from "@/components/productivity/page";
 import Performance from "@/components/performance/page";
 import SocialMedia from "@/components/socialmedia/page";
 import Footer from "@/components/footer/page";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   return (
     <>
+    <SpeedInsights />
     <Navbar className="relative" />
     <LandingPage />
     <div className="lg:px-20">
