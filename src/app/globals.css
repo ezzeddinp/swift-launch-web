@@ -17,16 +17,27 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url("/gradient-bg.png");
+  background-size: cover;
+  background-position-x: 500%;
+  overflow-x: hidden;
 }
 
-@layer utilities {
+.neonText {
+  color: transparent;
+  background: linear-gradient(to right, #ff109f, #2018ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgb(255, 134, 21), 
+               0 0 20px rgba(255, 25, 205, 0.952), 
+               0 0 30px rgba(255, 25, 255, 0.945);
+  /* filter: blur(0.05px); */
+  padding-bottom: 0.1rem;
+}
+
+
+@media utilities {
   .text-balance {
     text-wrap: balance;
   }
